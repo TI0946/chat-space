@@ -144,12 +144,12 @@ $blue_btn: #38aef0;
     }
     &__send  {
       background-color: $blue_btn;
-      height: 50px;
-      line-height: 50px;
-      width: 100px;
       margin: 0px 40px 0px 15px;
-      padding: 0px 30px;
+      height: 50px;
       &--btn {
+        line-height: 50px;
+        width: 100px;
+        padding: 16px 30px;
         color: $white;
         text-decoration: none;
       }
