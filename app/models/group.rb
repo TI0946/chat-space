@@ -16,6 +16,4 @@ class Group < ApplicationRecord
       'まだメッセージはありません。'
     end
   end
-  
-  validates :name, presence: true, uniqueness: true
 end
