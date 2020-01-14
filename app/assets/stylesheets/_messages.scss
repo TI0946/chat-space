@@ -148,19 +148,6 @@ $blue_btn: #38aef0;
       }
 
     }
-<<<<<<< Updated upstream
-    &__send  {
-      background-color: $blue_btn;
-      margin: 0px 40px 0px 15px;
-      height: 50px;
-      &--btn {
-        line-height: 50px;
-        width: 100px;
-        padding: 16px 30px;
-        color: $white;
-        text-decoration: none;
-      }
-=======
     &__submit {
       background-color: $blue_btn;
       cursor: pointer;
@@ -171,7 +158,6 @@ $blue_btn: #38aef0;
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
->>>>>>> Stashed changes
     }
   }
 }

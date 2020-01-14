@@ -1,31 +1,21 @@
 .chat-main
   .chat-main__group-list
-    .chat-main__group-list__name 
-      test
+    .chat-main_group-list__name
+      =@group.name
       .chat-main__group-list__name__member 
-        Member：ishikawa
+        Member: 
+        .chat-main__group-list__name__member-list
+          =@group.users.pluck(:name).join(" , ")
     .chat-main__group-list__edit
-      =link_to"#", class:"chat-main__group-list__edit--btn" do
+      =link_to edit_group_path(@group) , class:"chat-main__group-list__edit--btn" do
         Edit
-  .chat-main__message-list
-    .chat-main__message-list__name
-      ea
-      .chat-main__message-list__name--data
-        2020/1/6(Mon) 19:23:00
-    .chat-main__message-list__content
-      テスト
-    .chat-main__message-list__name
-      Tea
-      .chat-main__message-list__name--data
-        2020/1/6(Mon) 19:28:00
-    .chat-main__message-list__content
-      テスト2
-  .chat-main__message-form
-    .chat-main__message-form__new-message
-      type a message
-      %label{class: "chat-main__message-form__new-message__image"}
-        = icon('fas', 'image')
-        %input{type: "file", class: "chat-main__message-form__new-message__image__file"}
-    .chat-main__message-form__send
-      =link_to"#", class:"chat-main__message-form__send--btn" do
-        Send
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit' 
