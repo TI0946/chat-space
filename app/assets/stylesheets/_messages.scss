@@ -36,7 +36,6 @@ $blue_btn: #38aef0;
       &__name {
         font-size: 16px;
       }
-
     }
   }
   &__group-list {
@@ -44,7 +43,15 @@ $blue_btn: #38aef0;
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
+    color: $white;
     font-weight: bold;
+    &__name {
+      margin: 20px 20px 5px 20px;
+      font-size: 15px ;
+    }
+    &__message {
+      margin: 0px 20px 40px 20px;
+      font-size: 11px ;
     &__group {
       &__btn {
         text-decoration: none;
@@ -83,6 +90,9 @@ $blue_btn: #38aef0;
         margin-top: 15px;
         font-size: 12px;
         color: $silver_gray;
+        display: flex;
+        &_list {
+        }
       }
     }
     &__edit {
@@ -93,7 +103,6 @@ $blue_btn: #38aef0;
         text-decoration: none;
         color: $blue_btn;
       }
-      
     }
   }
   .messages {
