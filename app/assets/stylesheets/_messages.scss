@@ -36,7 +36,6 @@ $blue_btn: #38aef0;
       &__name {
         font-size: 16px;
       }
-
     }
   }
   &__group-list {
@@ -44,7 +43,15 @@ $blue_btn: #38aef0;
     height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
+    color: $white;
     font-weight: bold;
+    &__name {
+      margin: 20px 20px 5px 20px;
+      font-size: 15px ;
+    }
+    &__message {
+      margin: 0px 20px 40px 20px;
+      font-size: 11px ;
     &__group {
       &__btn {
         text-decoration: none;
@@ -83,6 +90,9 @@ $blue_btn: #38aef0;
         margin-top: 15px;
         font-size: 12px;
         color: $silver_gray;
+        display: flex;
+        &_list {
+        }
       }
     }
     &__edit {
@@ -93,74 +103,65 @@ $blue_btn: #38aef0;
         text-decoration: none;
         color: $blue_btn;
       }
-      
     }
   }
-  &__message-list{
-    background-color: #fafafa;
-    height: calc(100vh - 190px);
-    &__name {
-      padding: 35px 0px 12px 40px;
-      font-size: 16px;
-      color: $dark_gray;
-      display: flex;
-      font-weight: bold;
-      &--data {
-        font-weight: lighter;
-        margin-left: 10px;
-        color: $silver_gray;
-        font-size: 12px;
-      }
-    }
-    &__content {
-      margin-left: 40px;
-      font-size: 14px;
-      color: #434a54;
-      margin-bottom: 11px;
-    }
-  }
-  &__message-form{
-    height: 90px;
-    background-color: #d2d2d2;
-    bottom: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__new-message {
-      position: relative;
-      line-height: 50px;
-      width: 100%;
-      margin: 10px 0px 10px 40px;
-      padding: 0px 40px 0px 10px;
-      background-color: $white;
-      height: 50px;
-      color: $silver_gray;
-      &__image {
-        color: black;
-        top: 0px;
-        right: 10px;
-        position: absolute;
-        font-size: 1.3rem;
-        cursor: pointer;
-        &__file {
-          display: none;
+  .messages {
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999;
+          font-size: 12px;
+          padding-left: 10px;
         }
       }
-
-    }
-<<<<<<< Updated upstream
-    &__send  {
-      background-color: $blue_btn;
-      margin: 0px 40px 0px 15px;
-      height: 50px;
-      &--btn {
-        line-height: 50px;
-        width: 100px;
-        padding: 16px 30px;
-        color: $white;
-        text-decoration: none;
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
       }
-=======
+    }
+  }
+  .form {
+    background-color: #dddddd;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    bottom: auto;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+      padding-left: 10px;
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
     &__submit {
       background-color: $blue_btn;
       cursor: pointer;
@@ -171,7 +172,6 @@ $blue_btn: #38aef0;
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
->>>>>>> Stashed changes
     }
   }
 }
