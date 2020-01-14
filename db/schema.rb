@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20200108080936) do
 
+
   create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "group_id"
     t.integer  "user_id"
@@ -28,8 +29,6 @@ ActiveRecord::Schema.define(version: 20200108080936) do
     t.index ["name"], name: "index_groups_on_name", unique: true, using: :btree
   end
 
-<<<<<<< Updated upstream
-=======
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
     t.string   "image"
@@ -40,8 +39,7 @@ ActiveRecord::Schema.define(version: 20200108080936) do
     t.index ["group_id"], name: "index_messages_on_group_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
-
->>>>>>> Stashed changes
+  
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
@@ -58,9 +56,6 @@ ActiveRecord::Schema.define(version: 20200108080936) do
 
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
-<<<<<<< Updated upstream
-=======
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
->>>>>>> Stashed changes
 end
