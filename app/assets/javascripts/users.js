@@ -54,8 +54,6 @@ $("#user-search-field").on("keyup", function() {
       alert("通信エラーです。ユーザーが表示できません。");
     });
 });
-$(document).on("click", ".chat-group-user__btn--add", function() {
-  console.log
   const userName = $(this).attr("data-user-name");
   const userId = $(this).attr("data-user-id");
   $(this)
@@ -68,5 +66,4 @@ $(document).on("click", ".chat-group-user__btn--remove", function() {
   $(this)
     .parent()
     .remove();
-});
-});
+}); 
