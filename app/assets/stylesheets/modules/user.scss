@@ -10,15 +10,12 @@
     .account-page__inner--left, .account-page__inner--right {
       float: left;
       width: 50%;
-      &:after {
-        clear: both;
-        content: "";
-        display: block;
-      }
     }
-  }
-  .a {
-    text-decoration: none;
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
   }
 
   .account-page__header {
@@ -116,6 +113,9 @@
         background-color: #d65f4c;
       }
     }
+  }
+  .a {
+    text-decoration: none;
   }
 }
 
