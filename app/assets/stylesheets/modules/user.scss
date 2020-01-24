@@ -16,6 +16,9 @@
       content: "";
       display: block;
     }
+    .a {
+      text-decoration: none;
+    }
   }
 
   .account-page__header {
@@ -113,9 +116,6 @@
         background-color: #d65f4c;
       }
     }
-  }
-  .a {
-    text-decoration: none;
   }
 }
 
